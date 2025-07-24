@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alaz</title>
+  <!-- Instrument font (fallback to serif if not available) -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@1,400&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    body {
+      min-height: 100vh;
+      min-width: 100vw;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(20deg, #b3d0ff 0%, #d0e4ff 50%, #b3cfff 100%);
+      animation: gradientMove 50s ease-in-out infinite alternate;
+      transition: background 25s ease-in-out;
+    }
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+        background: radial-gradient(circle at 30% 30%, #b3d0ff 0%, #7fb3ff 40%, #e3ecfa 80%, #f5faff 100%);
+      }
+      50% {
+        background-position: 100% 70%;
+        background: radial-gradient(circle at 70% 60%, #7fb3ff 0%, #b3d0ff 40%, #dbe7fa 80%, #eaf2ff 100%);
+      }
+      100% {
+        background-position: 0% 50%;
+        background: radial-gradient(circle at 50% 70%, #b3cfff 0%, #7fb3ff 40%, #e3ecfa 80%, #f7faff 100%);
+      }
+    }
+    .container {
+      text-align: center;
+      z-index: 1;
+    }
+    .title {
+      font-family: 'Instrument Serif', serif;
+      font-size: 12rem;
+      font-style: italic;
+      color: #394663;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(40px) scale(0.92);
+      animation: titleEntrance 1.8s cubic-bezier(0.4, 0.2, 0.2, 1) 0.2s forwards;
+    }
+    @keyframes titleEntrance {
+      0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.92);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.04);
+      }
+      80% {
+        opacity: 1;
+        transform: translateY(2px) scale(0.98);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .subtitle {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.2rem;
+      color: #7c8591;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Alaz</div>
+   <!-- <div class="subtitle">Your personal reminder system — everywhere</div> -->
+  </div>
+</body>
+</html> 
